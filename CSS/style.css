@@ -1,15 +1,25 @@
 *,
 *::after,
 *::before {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --font-main: 'Inter', sans-serif;
+    --color-orange: #FF5A36;
+    --color-text: #212121;
+    --color-bg: #FCF8F5;
+}
+
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 main {
@@ -21,3 +31,499 @@ main {
     margin: 0 auto;
 }
 
+/* --- Задание 5. Верстка главного меню сайта --- */
+.header {
+    background-color: var(--color-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.header__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-orange);
+}
+
+.header__mainmenu ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.mainmenu__link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.mainmenu__link:hover,
+.mainmenu__link:focus,
+.mainmenu__link:active {
+    color: var(--color-orange);
+}
+
+.feedback {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+    
+.feedback__container {
+    display: flex;
+    gap: 40px;
+}
+    
+.feedback__intro,
+.feedback__main {
+    width: 50%;
+}
+    
+.feedback__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+    
+.feedback__img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #EEE; /* заглушка */
+}
+    
+.feedback__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    
+.form__item {
+    width: 100%;
+}
+    
+.form__elem {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+    
+.form__input,
+.form__textarea {
+    border: 2px solid var(--color-orange);
+    border-radius: 4px;
+    padding: 16px 20px;
+    background-color: #FFFFFF;
+    color: var(--color-text);
+}
+    
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: #888888;
+    text-transform: lowercase;
+}
+    
+.form__input:focus,
+.form__textarea:focus {
+    border-color: #D44424;
+    box-shadow: 0 0 8px rgba(255, 90, 54, 0.25);
+}
+    
+.form__textarea {
+    height: 140px;
+    resize: none;
+}
+
+.form__submit {
+    background-color: var(--color-orange);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+.form__submit:hover,
+.form__submit:focus,
+.form__submit:active {
+    background-color: #E04826;
+}
+
+
+/* --- Задание 6 и 8. Секция Каталог --- */
+.catalog {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.catalog__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Делаем карточки горизонтальными в одну линию */
+.catalog__container {
+    display: flex;
+    gap: 30px;
+}
+
+.catalog__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc((100% - 90px) / 4);
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.card__img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+/* flex-grow: 1 растягивает название, чтобы цены и кнопки стояли ровно по низу */
+.card__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.card__price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 16px;
+}
+
+.card__btn {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid var(--color-orange);
+    background-color: transparent;
+    color: var(--color-orange);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card__btn:hover,
+.card__btn:focus,
+.card__btn:active {
+    background-color: var(--color-orange);
+    color: #FFFFFF;
+}
+
+/* Кнопка + в карточке */
+.card__btn-add {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 32px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-text);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.card__btn-add:hover,
+.card__btn-add:focus,
+.card__btn-add:active {
+    background-color: var(--color-orange);
+    color: #FFFFFF;
+}
+
+/* Кнопки со стрелками слайдера */
+.catalog__button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.catalog__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #D0D0D0;
+    background-color: #FFFFFF;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.catalog__btn:hover,
+.catalog__btn:focus,
+.catalog__btn:active {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    color: #FFFFFF;
+}
+
+
+/* --- Секция 2: Баннер (LUMEN SHAPE) --- */
+.banner {
+    padding: 80px 0 60px;
+}
+
+.banner__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.banner__content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.banner__title {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.banner__desc {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #4A4A4A;
+    margin-bottom: 32px;
+    max-width: 380px;
+}
+
+.banner__btn {
+    display: inline-block;
+    background-color: var(--color-orange);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.banner__btn:hover,
+.banner__btn:focus,
+.banner__btn:active {
+    background-color: #E04826;
+    transform: translateY(-2px);
+}
+
+.banner__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+}
+
+/* --- Секция 3: О нас (две колонки: фото слева, текст и сетка справа) --- */
+.about {
+    padding: 80px 0;
+}
+
+.about__title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--color-text);
+}
+
+.about__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.about__img-box {
+    width: 45%;
+}
+
+.about__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.about__content {
+    width: 55%;
+}
+
+.about__desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 32px;
+}
+
+.about__features {
+    display: flex;
+    flex-wrap: wrap; /* Рисунок 31 из методички */
+    gap: 20px;
+}
+
+.about__feature {
+    width: calc((100% - 40px) / 3);
+    min-width: 140px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about__feature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.feature__number {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 8px;
+}
+
+.feature__text {
+    font-size: 13px;
+    line-height: 1.35;
+    color: #666666;
+}
+
+/* --- Секция 6 и 7: Подвал (Контакты и Копирайт на светлом фоне страницы) --- */
+.footer {
+    background-color: var(--color-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    margin-top: 80px;
+}
+
+.contacts {
+    padding: 60px 0 40px;
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contacts__left {
+    max-width: 320px;
+}
+
+.contacts__logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 12px;
+}
+
+.contacts__desc {
+    font-size: 15px;
+    color: #6C6C6C;
+    line-height: 1.5;
+}
+
+.contacts__right {
+    display: flex;
+    gap: 60px;
+}
+
+.contacts__col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts__label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: #999999;
+    letter-spacing: 0.5px;
+}
+
+.contacts__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+    color: var(--color-orange);
+}
+
+.contacts__text {
+    font-size: 15px;
+    color: var(--color-text);
+}
+
+.copyright {
+    padding: 24px 0 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.copyright__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright__text {
+    font-size: 13px;
+    color: #888888;
+}
