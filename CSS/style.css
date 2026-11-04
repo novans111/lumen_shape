@@ -31,7 +31,6 @@ main {
     margin: 0 auto;
 }
 
-/* --- Задание 5. Верстка главного меню сайта --- */
 .header {
     background-color: var(--color-bg);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -99,7 +98,7 @@ main {
     height: 380px;
     object-fit: cover;
     border-radius: 8px;
-    background-color: #EEE; /* заглушка */
+    background-color: #EEE; 
 }
     
 .feedback__form {
@@ -165,7 +164,6 @@ main {
 }
 
 
-/* --- Задание 6 и 8. Секция Каталог --- */
 .catalog {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -177,7 +175,6 @@ main {
     margin-bottom: 30px;
 }
 
-/* Делаем карточки горизонтальными в одну линию */
 .catalog__container {
     display: flex;
     gap: 30px;
@@ -203,7 +200,6 @@ main {
     margin-bottom: 16px;
 }
 
-/* flex-grow: 1 растягивает название, чтобы цены и кнопки стояли ровно по низу */
 .card__title {
     font-size: 18px;
     font-weight: 600;
@@ -240,7 +236,6 @@ main {
     color: #FFFFFF;
 }
 
-/* Кнопка + в карточке */
 .card__btn-add {
     position: absolute;
     top: 26px;
@@ -266,7 +261,6 @@ main {
     color: #FFFFFF;
 }
 
-/* Кнопки со стрелками слайдера */
 .catalog__button {
     display: flex;
     justify-content: flex-end;
@@ -297,7 +291,6 @@ main {
 }
 
 
-/* --- Секция 2: Баннер (LUMEN SHAPE) --- */
 .banner {
     padding: 80px 0 60px;
 }
@@ -363,7 +356,6 @@ main {
     object-fit: contain;
 }
 
-/* --- Секция 3: О нас (две колонки: фото слева, текст и сетка справа) --- */
 .about {
     padding: 80px 0;
 }
@@ -405,7 +397,7 @@ main {
 
 .about__features {
     display: flex;
-    flex-wrap: wrap; /* Рисунок 31 из методички */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
@@ -440,7 +432,6 @@ main {
     color: #666666;
 }
 
-/* --- Секция 6 и 7: Подвал (Контакты и Копирайт на светлом фоне страницы) --- */
 .footer {
     background-color: var(--color-bg);
     border-top: 1px solid rgba(0, 0, 0, 0.06);
