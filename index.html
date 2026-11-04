@@ -6,52 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUMEN</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            1
+        <div class="container header__container">
+            <h1 class="header__title">Lumen.</h1>
+            <nav class="header__mainmenu">
+                <ul>
+                    <li><a class="mainmenu__link" href="#about">О нас</a></li>
+                    <li><a class="mainmenu__link" href="#catalog">Каталог</a></li>
+                    <li><a class="mainmenu__link" href="#feedback">Обратная связь</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <main>
-        <section class="section banner">
-            <div class="container">
-                2
+        <main>
+        <section class="section banner" id="banner">
+            <div class="container banner__container">
+                <div class="banner__content">
+                    <h2 class="banner__title">LUMEN<br>SHAPE</h2>
+                    <p class="banner__desc">Светильники из переработанного пластика и стекла</p>
+                    <a href="#catalog" class="banner__btn">смотреть каталог</a>
+                </div>
+                <div class="banner__image">
+                    <img src="img/banner.png" alt="Светильник Lumen Shape" class="banner__img">
+                </div>
             </div>
         </section>
 
-        <section class="section about">
+        <section class="section about" id="about">
             <div class="container">
-                3
+                <h2 class="about__title">О нас</h2>
+                <div class="about__wrapper">
+                    <div class="about__img-box">
+                        <img src="img/about.png" alt="Производство Lumen" class="about__img">
+                    </div>
+                    <div class="about__content">
+                        <p class="about__desc">Мы создаем современные экологичные светильники, сочетая эстетику и бережное отношение к природе. Каждое изделие уникально и наполнено теплом ручной работы.</p>
+                        <div class="about__features">
+                            <div class="about__feature">
+                                <span class="feature__number">10 000+</span>
+                                <p class="feature__text">довольных клиентов</p>
+                            </div>
+                            <div class="about__feature">
+                                <span class="feature__number">50+</span>
+                                <p class="feature__text">моделей светильников</p>
+                            </div>
+                            <div class="about__feature">
+                                <span class="feature__number">100%</span>
+                                <p class="feature__text">эко-материалы</p>
+                            </div>
+                            <div class="about__feature">
+                                <span class="feature__number">2010</span>
+                                <p class="feature__text">год основания</p>
+                            </div>
+                            <div class="about__feature">
+                                <span class="feature__number">3000+</span>
+                                <p class="feature__text">проектов освещения</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
-                4
+                <h2 class="catalog__title">Каталог</h2>
+                    <div class="catalog">
+                        <div class="catalog__wrapper">
+                            <div class="catalog__container">
+                                <div class="catalog__card">
+                                    <img class="card__img" src="img/catalog1.png" alt="Картина 1">
+                                    <h3 class="card__title">Where Shadows Learn to Dance</h3>
+                                    <p class="card__price">2000 &#8381;</p>
+                                    <button class="card__btn">связаться</button>
+                                </div>
+                                <div class="catalog__card">
+                                    <img class="card__img" src="img/catalog2.png" alt="Картина 2">
+                                    <h3 class="card__title">Echoes of Quiet Solitude</h3>
+                                    <p class="card__price">2500 &#8381;</p>
+                                    <button class="card__btn">связаться</button>
+                                </div>
+                                <div class="catalog__card">
+                                    <img class="card__img" src="img/catalog3.png" alt="Картина 3">
+                                    <h3 class="card__title">Whispers in the Rustling Trees</h3>
+                                    <p class="card__price">1800 &#8381;</p>
+                                    <button class="card__btn">связаться</button>
+                                </div>
+                                <div class="catalog__card">
+                                    <img class="card__img" src="img/catalog4.png" alt="Картина 4">
+                                    <h3 class="card__title">Underneath the Violet Skies</h3>
+                                    <p class="card__price">3200 &#8381;</p>
+                                    <button class="card__btn">связаться</button>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="catalog__button">
+                            <button class="catalog__btn" aria-label="назад">
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-
+  width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="10 2 2 10 10 18"></polyline>
+                                </svg>
+                            </button>
+                            <button class="catalog__btn" aria-label="вперед">
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="currentColor" stroke-
+  width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="2 2 10 10 2 18"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+        <section class="section feedback" id="feedback">
+            <div class="container feedback__container">
+                <div class="feedback__intro">
+                    <h2 class="feedback__title">ОСТАЛИСЬ<br>ВОПРОСЫ?</h2>
+                    <img class="feedback__img" src="img/feedback.png" alt="Светильники">
+                </div>
+                <div class="feedback__main">
+                    <form class="feedback__form" action="#">
+                        <div class="form__item">
+                            <input class="form__elem form__input" type="text" name="name" placeholder="имя" required>
+                        </div>
+                        <div class="form__item">
+                            <input class="form__elem form__input" type="tel" name="phone" placeholder="телефон" required>
+                        </div>
+                        <div class="form__item">
+                            <input class="form__elem form__input" type="email" name="mail" placeholder="email" required>
+                        </div>
+                        <div class="form__item">
+                            <textarea class="form__elem form__textarea" name="message" placeholder="напишите ваш вопрос"
+  required></textarea>
+                        </div>
+                        <div class="form__item">
+                            <input class="form__elem form__submit" type="submit" value="отправить">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
-
-        <section class="section feedback">
-            <div class="container">
-                5
-            </div>
-        </section>
-
     </main>
     <footer class="footer">
-        <section class="section contacts">
-            <div class="container">
-                6
+        <section class="section contacts" id="contacts">
+            <div class="container contacts__container">
+                <div class="contacts__left">
+                    <h2 class="contacts__logo">Lumen.</h2>
+                    <p class="contacts__desc">Студия современного экологичного освещения</p>
+                </div>
+                <div class="contacts__right">
+                    <div class="contacts__col">
+                        <span class="contacts__label">связаться с нами</span>
+                        <a href="tel:+79991234567" class="contacts__link">+7 (999) 123-45-67</a>
+                        <a href="mailto:hello@lumen.ru" class="contacts__link">hello@lumen.ru</a>
+                    </div>
+                    <div class="contacts__col">
+                        <span class="contacts__label">адрес</span>
+                        <p class="contacts__text">Москва, ул. Дизайна, 15</p>
+                        <p class="contacts__text">Пн-Вс: 10:00 — 21:00</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section copyright">
-            <div class="container">
-                7
+            <div class="container copyright__container">
+                <p class="copyright__text">© Lumen. Все права защищены</p>
             </div>
         </section>
-
     </footer>
 </body>
 </html>
