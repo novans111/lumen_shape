@@ -710,4 +710,5 @@ main {
 
 .show {
     display: block;
+    z-index: 10;
 }
